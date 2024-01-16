@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { UserModule } from './user/user.module';
 import { ConfigModule } from '@nestjs/config';
-import { CONFIG_DATABASE } from './common/infraestructure/database.config';
+import { CONFIG_DATABASE } from './common/infraestructure/infraestructure/database.config';
 
 @Module({
   imports: [ ConfigModule.forRoot({
