@@ -2,7 +2,6 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { Transport } from '@nestjs/microservices';
 import { MailQueue } from './user/infraestructure/enum';
-import { ExceptionFilter } from './common/infraestructure/infraestructure/filters/exception.filter';
 
 async function bootstrap() {
 
@@ -14,7 +13,6 @@ async function bootstrap() {
     }
   });
 
-  // app.useGlobalFilters(new ExceptionFilter());
 
   await app.listen();
 }
