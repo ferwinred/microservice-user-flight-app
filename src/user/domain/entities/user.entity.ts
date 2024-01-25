@@ -1,5 +1,5 @@
-import { UserState } from "src/common/infraestructure/infraestructure/enum";
-import { BaseEntity } from "../../../common/infraestructure/domain/entity/base.entity";
+import { UserState } from "../../../common/infraestructure/enum";
+import { BaseEntity } from "../../../common/domain/entity/base.entity";
 import { Column, Entity } from "typeorm";
 
 @Entity()

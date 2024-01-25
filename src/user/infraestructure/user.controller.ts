@@ -4,7 +4,7 @@ import { UserService } from '../application/user.service';
 import { UserDto } from './dto/user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { UserMSG } from './enum';
-import { ExceptionFilter } from '../../common/infraestructure/infraestructure/filters/exception.filter';
+import { ExceptionFilter } from '../../common/infraestructure/filters/exception.filter';
 
 @UseFilters(new ExceptionFilter())
 @Controller()
