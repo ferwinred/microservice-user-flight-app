@@ -1,8 +1,7 @@
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Dialect } from './enum';
-import { Entity } from 'typeorm';
-import { User } from 'src/user/domain/entities/user.entity';
+import { User } from '../../user/domain/entities/user.entity';
 
 ConfigModule.forRoot({
 	isGlobal: true,
