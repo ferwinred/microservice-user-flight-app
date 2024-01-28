@@ -1,4 +1,4 @@
-import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { UserDto } from '../infraestructure/dto/user.dto';
 import { UpdateUserDto } from '../infraestructure/dto/update-user.dto';
 import { Repository } from 'typeorm';
@@ -21,7 +21,10 @@ export class UserService {
       return await this.userRepository.save(user);
 
     } catch (error) {
-      throw new Error(error.message);
+      throw new RpcException({ 
+        status: 500, 
+        message: error.message
+      });
     }
   }
 
@@ -59,8 +62,6 @@ export class UserService {
   }
 
   async remove(id: string) {
-
-
 
     const user = await this.userRepository.findOne({
       where: {
